@@ -8,5 +8,14 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+const boostrapModule = () => {
+  platformBrowserDynamic()
+    .bootstrapModule(AppModule)
+    .catch(err => console.error(err));
+};
+
+if(window.WebComponents.ready) {
+  boostrapModule();
+} else {
+  window.addEventListener("WebComponentsReady", boostrapModule);
+}

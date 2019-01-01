@@ -23,6 +23,11 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
+              {
+                "glob": "{*loader.js,bundles/*.js}",
+                "input": "node_modules/@webcomponents/webcomponentsjs/",
+                "output": "@webcomponents/webcomponentsjs"
+              },
               "src/favicon.ico",
               "src/assets"
             ],
@@ -87,6 +92,11 @@
             ],
             "scripts": [],
             "assets": [
+              {
+                "glob": "{*loader.js,bundles/*.js}",
+                "input": "node_modules/@webcomponents/webcomponentsjs/",
+                "output": "@webcomponents/webcomponentsjs"
+              },
               "src/favicon.ico",
               "src/assets"
             ]

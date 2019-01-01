@@ -17,6 +17,8 @@
 /***************************************************************************************************
  * BROWSER POLYFILLS
  */
+/** webcomponents polyfill for ES5 syntax  */
+import '@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js';
 
 /** IE9, IE10 and IE11 requires all of the following polyfills. **/
 // import 'core-js/es6/symbol';

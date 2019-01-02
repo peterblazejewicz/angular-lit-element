@@ -24,7 +24,7 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               {
-                "glob": "{*loader.js,bundles/*.js}",
+                "glob": "**/*.js",
                 "input": "node_modules/@webcomponents/webcomponentsjs/",
                 "output": "@webcomponents/webcomponentsjs"
               },

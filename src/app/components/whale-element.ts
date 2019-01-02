@@ -1,7 +1,7 @@
 import { LitElement, html, property, customElement } from '@polymer/lit-element';
-
-@customElement('whalte-element')
-class WhaleElement extends LitElement {
+     
+@customElement('whale-element')
+export class WhaleElement extends LitElement {
 
     @property()
     foo = 'foo';
@@ -14,10 +14,10 @@ class WhaleElement extends LitElement {
     constructor() {
         super();
         this.whales++;
-        async () => {
-            await this.updateComplete;
-            this.dispatchEvent(new CustomEvent('whales', {detail: {whales: this.whales}}))
-        }
+        // async () => {
+        //     await this.updateComplete;
+        //     this.dispatchEvent(new CustomEvent('whales', {detail: {whales: this.whales}}))
+        // }
     }
 
     // Render method should return a `TemplateResult` using the provided lit-html `html` tag function
@@ -35,5 +35,11 @@ class WhaleElement extends LitElement {
         <div>whales: ${'🐳'.repeat(this.whales)}</div>
         <slot></slot>
         `;
+    }
+}
+
+declare global {
+    interface HTMLElementTagNameMap {
+        'my-element': WhaleElement;
     }
 }

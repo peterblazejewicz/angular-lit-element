@@ -14,10 +14,10 @@ export class WhaleElement extends LitElement {
     constructor() {
         super();
         this.whales++;
-        // async () => {
-        //     await this.updateComplete;
-        //     this.dispatchEvent(new CustomEvent('whales', {detail: {whales: this.whales}}))
-        // }
+        async () => {
+            await this.updateComplete;
+            this.dispatchEvent(new CustomEvent('whales', {detail: {whales: this.whales}}))
+        }
     }
 
     // Render method should return a `TemplateResult` using the provided lit-html `html` tag function

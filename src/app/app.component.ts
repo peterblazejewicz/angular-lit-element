@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
-import './components/whale-element';
+import './components/my-element';
+import './components/ts-element';
 
 @Component({
   selector: 'app-root',
   template: `
-    <whale-element whales="5">hi</whale-element>
+    <my-element bar="5" whales="5" foobar="17">Hi</my-element>
+    <hr>
+    <ts-element message="Yo" more-info="person"></ts-element>
   `,
   styles: []
 })

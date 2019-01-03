@@ -18,12 +18,6 @@
  * BROWSER POLYFILLS
  */
 
-/** Add support for window.customElements */
-import "@webcomponents/custom-elements/custom-elements.min";
-
-/** Required for custom elements for apps building to es5. */
-import "@webcomponents/custom-elements/src/native-shim";
-
 /** IE9, IE10 and IE11 requires all of the following polyfills. **/
 // import 'core-js/es6/symbol';
 // import 'core-js/es6/object';
